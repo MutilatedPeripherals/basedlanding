@@ -1,10 +1,11 @@
 defmodule BasedLandingWeb.ThermostatLive do
   use Phoenix.LiveView
   alias BasedLandingWeb.Components.ProjectCard
+  alias BasedLandingWeb.Components.InceptionCard
 
   @timer_interval_1 1000
-  @timer_interval_2 3000
-  @timer_interval_3 6000
+  @timer_interval_2 2000
+  @timer_interval_3 3000
 
 
   @projects [
@@ -37,7 +38,7 @@ defmodule BasedLandingWeb.ThermostatLive do
  def render(assigns) do
     ~H"""
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-      <%= if @counter_1 > 0 do %>
+       <%= if @counter_1 > 0 do %>
       <ProjectCard.project_card
           title={Enum.at(@projects, 0).title}
           description={Enum.at(@projects, 0).description}
@@ -60,14 +61,17 @@ defmodule BasedLandingWeb.ThermostatLive do
       <% end %>
 
       <%= if @counter_3 > 0 do %>
-      <ProjectCard.project_card
-          title={Enum.at(@projects, 2).title}
-          description={Enum.at(@projects, 2).description}
-          tech_stack={Enum.at(@projects, 2).tech_stack}
-          image_url={Enum.at(@projects, 2).image_url}
-          github_url={Enum.at(@projects, 2).github_url}
-          live_url={Enum.at(@projects, 2).live_url}
-        />
+      <InceptionCard.inception_card
+        title="My Project"
+        description="A cool project description"
+        tech_stack={["Elixir", "Phoenix", "TailwindCSS"]}
+        image_url="/images/project.jpg"
+        github_url="https://github.com/username/project"
+        live_url="https://example.com"
+        max_depth={3}
+        scale={0.8}
+        rotation={5}
+      />
       <% end %>
     </div>
     """
@@ -75,9 +79,9 @@ defmodule BasedLandingWeb.ThermostatLive do
 
   def mount(_params, _session, socket) do
     if connected?(socket) do
-      :timer.send_interval(@timer_interval_1, self(), :inc_counter_1)
-      :timer.send_interval(@timer_interval_2, self(), :inc_counter_2)
-      :timer.send_interval(@timer_interval_3, self(), :inc_counter_3)
+      :timer.send_after(@timer_interval_1, self(), :inc_counter_1)
+      :timer.send_after(@timer_interval_2, self(), :inc_counter_2)
+      :timer.send_after(@timer_interval_3, self(), :inc_counter_3)
     end
 
     {:ok,

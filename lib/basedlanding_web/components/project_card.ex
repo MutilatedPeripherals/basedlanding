@@ -13,9 +13,9 @@ defmodule BasedLandingWeb.Components.ProjectCard do
   def project_card(assigns) do
     ~H"""
     <div class="animate-[bounce_1s_ease-in-out_1] bg-white rounded-lg shadow-lg overflow-hidden">
-      <%= if @image_url do %>
+      <%!-- <%= if @image_url do %>
         <img src={@image_url} alt={@title} class="w-full h-48 object-cover"/>
-      <% end %>
+      <% end %> --%>
       <div class="p-6">
         <h3 class="text-xl font-bold text-gray-900 mb-2"><%= @title %></h3>
         <p class="text-gray-600 mb-4"><%= @description %></p>

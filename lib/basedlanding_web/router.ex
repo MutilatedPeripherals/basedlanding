@@ -18,7 +18,6 @@ defmodule BasedLandingWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
-    # live "/", ThermostatLive
   end
 
   # Other scopes may use custom stacks.
