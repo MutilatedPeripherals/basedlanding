@@ -7,7 +7,7 @@ services:
       MIX_ENV: prod
       PORT: 4000
       SECRET_KEY_BASE: "${SECRET_KEY_BASE}"  # Add this line
-      PHX_SERVER: true  
+      PHX_SERVER: "true"  
     ports:
       - "4000:4000"
     restart: always

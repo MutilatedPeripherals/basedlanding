@@ -41,9 +41,9 @@ mix phx.server
 ### For deployment:
 
 ```bash
-export SECRET_KEY_BASE=$(mix phx.gen.secret)
+export SECRET_KEY_BASE=$(openssl rand -base64 48)
 
-docker-compose up --build
+docker compose up --build
 ```
 
 ### References: 
