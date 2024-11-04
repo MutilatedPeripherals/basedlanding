@@ -38,6 +38,14 @@ mix deps.get
 mix phx.server
 ```
 
+### For deployment:
+
+```bash
+export SECRET_KEY_BASE=$(mix phx.gen.secret)
+
+docker-compose up --build
+```
+
 ### References: 
 - https://elixir-lang.org/install.html#gnulinux
 - https://hexdocs.pm/phoenix/installation.html
