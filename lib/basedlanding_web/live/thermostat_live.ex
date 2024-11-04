@@ -30,5 +30,6 @@ defmodule BasedLandingWeb.ThermostatLive do
       :inc_counter_3 -> :counter_3
     end
     {:noreply, update(socket, attribute_to_bump, &(&1 + 1))}
+    # &(&1 + 1) == fn x -> x + 1 end
   end
 end
