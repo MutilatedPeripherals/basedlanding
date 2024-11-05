@@ -7,7 +7,6 @@ defmodule BasedLandingWeb.ThermostatLive do
   @timer_interval_2 2000
   @timer_interval_3 3000
 
-
   @projects [
     %{
       title: "BasedChat",
