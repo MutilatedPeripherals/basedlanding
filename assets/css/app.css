@@ -3,14 +3,14 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
-/* 
+
 @keyframes wiggle {
     0%, 100% { transform: rotate(-3deg) scale(0.9); }
     25% { transform: rotate(5deg) scale(1.1); }
     50% { transform: rotate(-5deg) scale(2); }
     75% { transform: rotate(3deg) scale(0.95); }
-  } */
-/*   
+  }
+  
 @keyframes chaos {
   0% { 
     transform: translate(0, 0) rotate(0deg) scale(1);
@@ -27,15 +27,15 @@
   100% { 
     transform: translate(0, 0) rotate(360deg) scale(1);
   }
-} */
-/* 
+}
+
 @keyframes cursorColors {
   0% { filter: hue-rotate(0deg) brightness(1.5); }
   25% { filter: hue-rotate(90deg) brightness(2); }
   50% { filter: hue-rotate(180deg) brightness(1.2); }
   75% { filter: hue-rotate(270deg) brightness(1.8); }
   100% { filter: hue-rotate(360deg) brightness(1.5); }
-} */
+}
 
 /* Global cursor chaos */
 * {
@@ -48,7 +48,7 @@
 }
 
 /* Add some extra GPU-melting glow effects on hover */
-/* *:hover::after {
+*:hover::after {
   content: '';
   position: fixed;
   width: 32px;
@@ -59,4 +59,4 @@
   mix-blend-mode: screen;
   animation: chaos 1s infinite;
   z-index: 9999;
-} */
+}
