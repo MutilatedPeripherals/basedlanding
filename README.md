@@ -50,3 +50,4 @@ docker compose up --build
 - https://elixir-lang.org/install.html#gnulinux
 - https://hexdocs.pm/phoenix/installation.html
 - https://github.com/inotify-tools/inotify-tools/wiki
+- https://basedlanding-production.up.railway.app/ (Don't open with your phone/personal computer)
