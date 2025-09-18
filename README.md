@@ -46,6 +46,10 @@ export SECRET_KEY_BASE=$(openssl rand -base64 48)
 docker compose up --build
 ```
 
+### Issues
+
+- Not working on railway. Currently deployed on digital ocean droplet:  https://basedsolutions.xmp.systems/
+
 ### References: 
 - https://elixir-lang.org/install.html#gnulinux
 - https://hexdocs.pm/phoenix/installation.html
